@@ -32,7 +32,7 @@ void print_Board(char board[SIZE][SIZE]){
 void Renew_board(char board[SIZE][SIZE],char col,int row){
   int new_col=col-65;
   board[--row][new_col]='Z';
-  print_Board(board);
+ // print_Board(board);
 /* int i,j;
   char C;
   cout<<"  ";
@@ -64,5 +64,5 @@ int main() {
   cout<<"Put a zebrarider (col row): ";
   cin>>col>>row;
   Renew_board(board,col,row);
-  
+  print_Board(board);
 };
