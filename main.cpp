@@ -23,8 +23,9 @@ void print_Board(char board[SIZE][SIZE]){
   for(i=0;i<SIZE;i++){
     cout<<i+1<<" ";
     for(j=0;j<SIZE;j++){
-      cout<<board[i][j]<<" "
+      cout<<board[i][j]<<" ";
     }
+    cout<<endl;
   }
 };
 
