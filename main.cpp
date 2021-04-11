@@ -31,8 +31,23 @@ void print_Board(char board[SIZE][SIZE]){
 
 void Renew_board(char board[SIZE][SIZE],char col,int row){
   int new_col=col-65;
-  board[row][new_col]='Z';
+  board[--row][new_col]='Z';
   print_Board(board);
+/* int i,j;
+  char C;
+  cout<<"  ";
+  for(i=0;i<SIZE;i++){
+    C=65+i;
+    cout<<C<<" ";
+  }
+  cout<<endl;
+  for(i=0;i<SIZE;i++){
+    cout<<i+1<<" ";
+    for(j=0;j<SIZE;j++){
+      cout<<board[i][j]<<" ";
+    }
+    cout<<endl;
+  }*/
 };
 
 int main() {
