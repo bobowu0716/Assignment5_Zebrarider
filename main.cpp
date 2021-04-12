@@ -39,26 +39,54 @@ void Renew_board(char board[SIZE][SIZE],char col,int row){
     row=row+3;
     new_col=new_col+2;
   }
-  while(row+3<SIZE&&new_col-2<=0){
+  while(row+3<SIZE&&new_col-2>=0){
     if(board[row+3][new_col-2]!='Z'){
       board[row+3][new_col-2]='=';
     }
     row=row+3;
     new_col=new_col-2;
   }
-  while(row-3<=0&&new_col+2<SIZE){
+  while(row-3>=0&&new_col+2<SIZE){
     if(board[row-3][new_col+2]!='Z'){
       board[row-3][new_col+2]='=';
     }
     row=row-3;
     new_col=new_col+2;
   }
-  while(row-3<=0&&new_col-2<=0){
+  while(row-3>=0&&new_col-2>=0){
     if(board[row-3][new_col-2]!='Z'){
       board[row-3][new_col-2]='=';
     }
     row=row-3;
     new_col=new_col-2;
+  }
+  while(row+2<SIZE&&new_col+3<SIZE){
+    if(board[row+2][new_col+3]!='Z'){
+      board[row+2][new_col+3]='=';
+    }
+    row=row+2;
+    new_col=new_col+3;
+  }
+  while(row+2<SIZE&&new_col-3>=0){
+    if(board[row+2][new_col-3]!='Z'){
+      board[row+2][new_col-3]='=';
+    }
+    row=row+2;
+    new_col=new_col-3;
+  }
+  while(row-2>=0&&new_col+3<SIZE){
+    if(board[row-2][new_col+3]!='Z'){
+      board[row-2][new_col+3]='=';
+    }
+    row=row-2;
+    new_col=new_col+3;
+  }
+  while(row-2>=0&&new_col-3>=0){
+    if(board[row-2][new_col-3]!='Z'){
+      board[row-2][new_col-3]='=';
+    }
+    row=row-2;
+    new_col=new_col-3;
   }
   print_Board(board);
   /*int i,j;
