@@ -33,35 +33,35 @@ void Renew_board(char board[SIZE][SIZE],char col,int row){
   int new_col=col-65;
   board[--row][new_col]='Z';
   while(row+3<SIZE&&new_col+2<SIZE){
-    if(board[row+3][new_col+2]/='Z'){
+    if(board[row+3][new_col+2]!='Z'){
       board[row+3][new_col+2]='=';
     }
     row=row+3;
     new_col=new_col+2;
   }
   while(row+3<SIZE&&new_col-2<=0){
-    if(board[row+3][new_col-2]/='Z'){
+    if(board[row+3][new_col-2]!='Z'){
       board[row+3][new_col-2]='=';
     }
     row=row+3;
     new_col=new_col-2;
   }
   while(row-3<=0&&new_col+2<SIZE){
-    if(board[row-3][new_col+2]/='Z'){
+    if(board[row-3][new_col+2]!='Z'){
       board[row-3][new_col+2]='=';
     }
     row=row-3;
     new_col=new_col+2;
   }
   while(row-3<=0&&new_col-2<=0){
-    if(board[row-3][new_col-2]/='Z'){
+    if(board[row-3][new_col-2]!='Z'){
       board[row-3][new_col-2]='=';
     }
     row=row-3;
     new_col=new_col-2;
   }
- // print_Board(board);
-/* int i,j;
+  print_Board(board);
+  /*int i,j;
   char C;
   cout<<"  ";
   for(i=0;i<SIZE;i++){
@@ -92,5 +92,5 @@ int main() {
   cout<<"Put a zebrarider (col row): ";
   cin>>col>>row;
   Renew_board(board,col,row);
-  print_Board(board);
+// print_Board(board);
 };
