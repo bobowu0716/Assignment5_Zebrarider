@@ -74,6 +74,7 @@ void Renew_board(char board[SIZE][SIZE],char col,int row){
     row=row+2;
     new_col=new_col-3;
   }
+  print_Board(board);
   while(row-2>=0&&new_col+3<SIZE){
     if(board[row-2][new_col+3]!='Z'){
       board[row-2][new_col+3]='=';
@@ -88,7 +89,7 @@ void Renew_board(char board[SIZE][SIZE],char col,int row){
     row=row-2;
     new_col=new_col-3;
   }
-  print_Board(board);
+  //print_Board(board);
   /*int i,j;
   char C;
   cout<<"  ";
